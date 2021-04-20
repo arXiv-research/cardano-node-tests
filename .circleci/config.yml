@@ -95,6 +95,7 @@ jobs:
       env:
         type: string
     executor: << parameters.os >>
+    resource_class: 2xlarge
     working_directory: ~/repo
     steps:
       - checkout
@@ -117,7 +118,8 @@ workflows:
                 - circle_ci_sync_tests
           matrix:
             parameters:
-              os: [ linux, macos, windows ]
+#              os: [ linux, macos, windows ]
+              os: [ linux ]
 #              env: [shelley_qa, testnet, staging, mainnet]
               env: [mainnet]
           name: test-on-<< matrix.os >>-with-env-<< matrix.env >>

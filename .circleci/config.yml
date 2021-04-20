@@ -114,6 +114,10 @@ workflows:
   sync_tests:
     jobs:
       - sync_test:
+          filters:
+            branches:
+              only:
+                - circle_ci_sync_tests
           matrix:
             parameters:
               os: [ linux, macos, windows ]

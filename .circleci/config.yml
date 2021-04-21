@@ -80,11 +80,11 @@ executors:
   linux:
     machine:
       image: ubuntu-2004:202010-01
-#    resource_class: 2xlarge
+    resource_class: 2xlarge
   macos:
     macos:
       xcode: 11.3.0
-#    resource_class: large
+    resource_class: large
   windows: win/default
 
 jobs:
@@ -95,7 +95,7 @@ jobs:
       env:
         type: string
     executor: << parameters.os >>
-    resource_class: 2xlarge
+#    resource_class: 2xlarge
     working_directory: ~/repo
     steps:
       - checkout

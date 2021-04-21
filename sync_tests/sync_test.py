@@ -496,7 +496,7 @@ def wait_for_node_to_sync(env, tag_no):
             actual_era_dict = {"start_epoch": actual_epoch, "start_time": actual_era_start_time}
             eras_start_time_dict[actual_era] = actual_era_dict
 
-        time.sleep(1)
+        time.sleep(60)
         count += 1
 
         actual_epoch, actual_block, actual_hash, actual_slot, actual_era = get_current_tip(tag_no)

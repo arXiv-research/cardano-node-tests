@@ -118,8 +118,8 @@ workflows:
                 - circle_ci_sync_tests
           matrix:
             parameters:
-#              os: [ linux, macos, windows ]
-              os: [ linux ]
+              os: [ linux, macos, windows ]
+#              os: [ linux ]
 #              env: [shelley_qa, testnet, staging, mainnet]
               env: [mainnet]
           name: test-on-<< matrix.os >>-with-env-<< matrix.env >>
